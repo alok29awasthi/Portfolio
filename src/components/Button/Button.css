@@ -1,0 +1,28 @@
+.custom-button button {
+    width: 150px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border-radius: 50px;
+    padding: 0.5rem 0;
+}
+
+.custom-button button:active {
+    transform: scale(0.9);
+}
+
+.custom-button button {
+    color: var(--text-color);
+    background: var(--background-color, transparent);
+    border: 2px solid var(--border-color);
+    box-shadow: inset 0 0 0 0 var(--box-shadow-color);
+}
+
+.custom-button button:hover {
+    color: var(--hover-text-color);
+    background-color: var(--hover-background-color, transparent);
+    box-shadow: inset 0 -100px 0 0 var(--hover-box-shadow-color);
+}

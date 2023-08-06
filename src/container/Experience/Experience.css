@@ -1,0 +1,207 @@
+.cv__experience {
+    background-color: rgb(230,218,206);
+    min-height: 100vh;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.cv__experience-heading {
+    margin-top: 12rem;
+    display: flex;
+    align-items: center;
+}
+
+.cv__experience-heading_square {
+    margin-right: 0.5rem;
+}
+
+.cv__experience-heading h1 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.cv__experience-summary {
+    margin: 3rem 0;
+    width: 55%;
+    text-align: center;
+}
+
+.cv__experience-comp {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cv__experience-comp:last-child {
+    margin-bottom: 5rem;
+}
+
+.cv__experience-comp_rect {
+    display: flex;
+    margin-top: 4rem;
+    height: 50px;
+    width: 12px;
+    background-color: blueviolet;
+    flex-shrink: 0;
+}
+
+.cv__experience-comp_description {
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2.5rem;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+.cv__experience-comp_description h2 {
+    font-size: 22px;
+    color: blueviolet;
+}
+
+.cv__experience-comp_description h3 {
+    font-size: 14px;
+    font-weight: 550;
+    margin-bottom: 3rem;
+}
+
+.cv__experience-comp_description ul {
+    list-style: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    line-height: 30px;
+    font-size: 14px;
+    color: gray;
+}
+
+.cv__experience-comp_description li::before {
+    content: '■'; 
+    font-size: 1.5em;
+    color: blueviolet;
+    margin-right: 0.2em; 
+}
+
+.cv__experience-comp_img-ms {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0,44,81);
+}
+
+.cv__experience-comp_img-oyo {
+    display: flex;
+    align-items: center;
+    background-color: rgb(219,62,42);
+}
+
+.cv__experience-comp_img-ms img, .cv__experience-comp_img-oyo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+@media screen and (max-width:900px) {
+    .cv__experience-summary {
+        width: 70%;
+    }
+
+    .cv__experience-comp {
+        flex-wrap: wrap;
+    }
+
+    .cv__experience-comp_description {
+        flex: 1;
+    }
+
+    .cv__experience-comp_img-ms, .cv__experience-comp_img-oyo {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cv__experience-comp_img-ms img, .cv__experience-comp_img-oyo img {
+        height: 100px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .cv__experience-summary {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .cv__experience-summary {
+        font-size: 15px;
+    }
+
+    .cv__experience-comp_description {
+        padding: 4rem 1.5rem;
+    }
+    
+    .cv__experience-comp_description h2 {
+        font-size: 18px;
+    }
+    
+    .cv__experience-comp_description h3 {
+        font-size: 12px;
+    }
+    
+    .cv__experience-comp_description ul {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:525px) {
+    .cv__experience-summary {
+        width: 85%;
+    }
+
+    .cv__experience-comp_description {
+        padding: 4rem 1rem;
+    }
+    
+    .cv__experience-comp_description h2 {
+        font-size: 14px;
+    }
+    
+    .cv__experience-comp_description h3 {
+        font-size: 10px;
+        margin-bottom: 2rem;
+    }
+    
+    .cv__experience-comp_description ul {
+        font-size: 10px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .cv__experience-comp_description h3 {
+        font-size: 9px;
+        margin-bottom: 2rem;
+    }
+    
+    .cv__experience-comp_description ul {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .cv__experience-comp_description h3 {
+        font-size: 8px;
+        margin-bottom: 2rem;
+    }
+    
+    .cv__experience-comp_description ul {
+        font-size: 8px;
+    }
+}

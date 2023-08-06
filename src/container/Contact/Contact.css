@@ -1,0 +1,141 @@
+span {
+    color: blueviolet;
+}
+
+form {
+    width: 100%;
+}
+
+.cv__contact {
+    background-color: rgb(230,218,206);
+    min-height: 100vh;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.cv__contact-heading {
+    margin-top: 12rem;
+    display: flex;
+    align-items: center;
+}
+
+.cv__contact-heading_square {
+    margin-right: 0.5rem;
+}
+
+.cv__contact-heading h1 {
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.cv__contact-form {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+    padding: 3rem;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cv__contact-row_1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv__contact-row_1-form_row {
+    width: 46%;
+}
+
+.cv__contact-form_row {
+    font-size: 14px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.cv__contact-form_row input[type="text"],
+.cv__contact-form_row input[type="email"],
+.cv__contact-form_row textarea {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.cv__contact-form_row input[type="text"]:focus,
+.cv__contact-form_row input[type="email"]:focus,
+.cv__contact-form_row textarea:focus {
+    outline: none;
+    border-color: blueviolet;
+}
+
+.error {
+    color: red;
+}
+
+.cv__contact-form_captcha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.cv__contact-form_sent {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+}
+
+.cv__contact-form_captcha-reset {
+    height: 20px;
+    outline: 5px;
+    margin: 0 1rem;
+}
+
+.cv__contact-form_captcha input {
+    width: 120px;
+}
+
+@media screen and (max-width:768px) {
+    .cv__contact-form {
+        padding: 3rem 1rem;
+    }
+
+    .cv__contact-row_1 {
+        flex-direction: column;
+    }
+
+    .cv__contact-row_1-form_row {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cv__contact-form_captcha {
+        margin-left: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cv__contact-form_captcha img {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .cv__contact-form {
+        width: 75%;
+    }
+}
