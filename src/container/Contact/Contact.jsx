@@ -8,6 +8,8 @@ import reset from '../../assets/reset.png'
 
 const Contact = () => {
 
+  const apiUrl = process.env.NODE_ENV === 'development' ? process.env.REACT_APP_API_URL_LOCAL : process.env.REACT_APP_API_URL_PROD;
+
   const[formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -36,7 +38,7 @@ const Contact = () => {
     if(validateForm()) {
       if(validateCaptcha()) {
         console.log('Captcha entered correctly')
-        axios.post('http://localhost:8080/send-email', formData)
+        axios.post(apiUrl + '/send-email', formData)
           .then(response => {
             setEmailSent(response.data);
             console.log(response.data);
@@ -55,7 +57,7 @@ const Contact = () => {
   const validateCaptcha = async () => {
     console.log('Captcha entered:', formData.captcha);
     // return new Promise((resolve, reject) => {
-      axios.post('http://localhost:8080/captcha-validation', formData.captcha)
+      axios.post(apiUrl + '/captcha-validation', formData.captcha)
       .then(response => {
         setIsCaptchaCorrect(response.data)
         return response.data;
@@ -76,7 +78,7 @@ const Contact = () => {
 
   const fetchCaptchaImage = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/captcha');
+      const response = await axios.get(apiUrl + '/captcha');
       setFormData(prevData => ({ ...prevData, captchaImage: response.data }));
       setImgSrc('data:image/png;base64,' + response.data)
     } catch (error) {
